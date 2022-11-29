@@ -39,10 +39,11 @@ This project was built by a team of 5 developers in 5 Days.
 ### Tech Stack
 
 ---
-
+- HTML
+- CSS
 - JavaScript
 - React JS
-- Redux JS
+- Redux
 - Node JS
 - Express JS
 - MongoDB
