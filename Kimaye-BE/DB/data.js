@@ -2,7 +2,7 @@ const data = [
   {
     title: "Kimaye Dasheri Mangoes (Pack of 3,6 &12)",
     image:
-      "https://cdn.shopify.com/s/files/1/0449/5225/6667/products/Dasheri_360x.jpg?v=1623855977",
+      "https://www.bigbasket.com/media/uploads/p/xxl/30001003-2_2-fresho-dasheri-mango.jpg",
     description:
       "Dasheri mangoes are long and oval shaped, with light green to yellow-green skin and turn golden yellow on ripening. Dasheri mangoes have a light yellow colored flesh with a medium-sized stone. This Mango variety is known for its very sweet and aromatic flavor.",
     origin: "India",
