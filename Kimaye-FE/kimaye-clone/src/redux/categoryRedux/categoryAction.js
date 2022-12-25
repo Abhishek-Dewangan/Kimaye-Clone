@@ -9,7 +9,7 @@ export const GET_CART_DATA = "GET_CART_DATA";
 export const getRequestBycat = (dispatch, category) => {
   dispatch({ type: IS_LOADING });
   axios
-    .get(`https://kimaye-backend.herokuapp.com/${category}`)
+    .get(`http://localhost:8080/${category}`)
     .then(({ data }) => {
       dispatch({
         type: GET_DATA_BY_CATEGORY,
@@ -23,7 +23,7 @@ export const getRequestBycat = (dispatch, category) => {
 
 export const addTocart = (payload) => {
   axios
-    .post("https://kimaye-backend.herokuapp.com/cart", payload)
+    .post("http://localhost:8080/cart", payload)
     .then((res) => console.log(res))
     .catch((err) => console.log(err));
   return {
@@ -34,7 +34,7 @@ export const addTocart = (payload) => {
 
 export const getCartData = (dispatch) => {
   axios
-    .get(`https://kimaye-backend.herokuapp.com/cart`)
+    .get(`http://localhost:8080/cart`)
     .then(({ data }) => {
       dispatch({
         type: GET_CART_DATA,

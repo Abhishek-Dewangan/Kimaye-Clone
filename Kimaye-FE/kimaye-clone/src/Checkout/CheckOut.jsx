@@ -91,7 +91,7 @@ const Checkout = () => {
       handler: async (response) => {
         try {
           const verifyURL =
-            "https://kimaye-backend.herokuapp.com/payment/verify";
+            "http://localhost:8080/payment/verify";
           const { data } = await axios.post(verifyURL, response);
           if (data.message === "Payment Varified Successfully") {
             removeCartData();
@@ -111,7 +111,7 @@ const Checkout = () => {
 
   const handlePayment = async () => {
     try {
-      const orderURL = "https://kimaye-backend.herokuapp.com/payment/orders";
+      const orderURL = "http://localhost:8080/payment/orders";
       const { data } = await axios.post(orderURL, {
         amount: totalPrice > 0 ? totalPrice : total_price,
       });
@@ -125,7 +125,7 @@ const Checkout = () => {
   const removeCartData = () => {
     localStorage.removeItem("cartData");
     axios
-      .delete("https://kimaye-backend.herokuapp.com/cart", {})
+      .delete("http://localhost:8080/cart", {})
       .then((res) => {
         console.log(res);
         navigate("/");
@@ -138,7 +138,7 @@ const Checkout = () => {
   };
 
   const getCartData = () => {
-    fetch("https://kimaye-backend.herokuapp.com/cart")
+    fetch("http://localhost:8080/cart")
       .then((res) => res.json())
       .then((data) => {
         if (data.length === 0) {

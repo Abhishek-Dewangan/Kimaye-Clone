@@ -23,7 +23,7 @@ const Cart = () => {
 
   const getCartData = () => {
     setIsLoading(true);
-    fetch("https://kimaye-backend.herokuapp.com/cart")
+    fetch("http://localhost:8080/cart")
       .then((res) => res.json())
       .then((data) => {
         setIsLoading(false);
@@ -43,7 +43,7 @@ const Cart = () => {
       return;
     }
     try {
-      let res = await fetch("https://kimaye-backend.herokuapp.com/cart", {
+      let res = await fetch("http://localhost:8080/cart", {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -63,7 +63,7 @@ const Cart = () => {
       return;
     }
     try {
-      let res = await fetch("https://kimaye-backend.herokuapp.com/cart", {
+      let res = await fetch("http://localhost:8080/cart", {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -87,7 +87,7 @@ const Cart = () => {
     localStorage.setItem("cartData", JSON.stringify(cartData));
 
     try {
-      let res = await fetch("https://kimaye-backend.herokuapp.com/cart", {
+      let res = await fetch("http://localhost:8080/cart", {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

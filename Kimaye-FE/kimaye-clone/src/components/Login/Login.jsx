@@ -16,7 +16,7 @@ export const Login = ({ setState }) => {
 
   const handleLogin = () => {
     axios
-      .post("https://kimaye-backend.herokuapp.com/auth/login", {
+      .post("http://localhost:8080/auth/login", {
         email,
         password,
       })
@@ -47,7 +47,7 @@ export const Login = ({ setState }) => {
   const handleSignup = (e) => {
     e.preventDefault();
     axios
-      .post("https://kimaye-backend.herokuapp.com/auth/signup", signUpdata)
+      .post("http://localhost:8080/auth/signup", signUpdata)
       .then((res) => {
         if (res.data.message) {
           notify(res.data.message.toUpperCase());
